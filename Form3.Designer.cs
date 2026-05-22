@@ -33,6 +33,7 @@
             this.pictureBoxOriginal = new System.Windows.Forms.PictureBox();
             this.pictureBoxResult = new System.Windows.Forms.PictureBox();
             this.btnUpload = new System.Windows.Forms.Button();
+            this.cmbColorSystem = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarColors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxResult)).BeginInit();
@@ -86,11 +87,28 @@
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
+            // cmbColorSystem
+            // 
+            this.cmbColorSystem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbColorSystem.FormattingEnabled = true;
+            this.cmbColorSystem.Items.AddRange(new object[] {
+            "RGB",
+            "CMY",
+            "HSV",
+            "YUV",
+            "LAB",
+            "YCbCr"});
+            this.cmbColorSystem.Location = new System.Drawing.Point(204, 80);
+            this.cmbColorSystem.Name = "cmbColorSystem";
+            this.cmbColorSystem.Size = new System.Drawing.Size(200, 24);
+            this.cmbColorSystem.TabIndex = 5;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1714, 925);
+            this.Controls.Add(this.cmbColorSystem);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.pictureBoxResult);
             this.Controls.Add(this.pictureBoxOriginal);
@@ -114,5 +132,6 @@
         private System.Windows.Forms.PictureBox pictureBoxOriginal;
         private System.Windows.Forms.PictureBox pictureBoxResult;
         private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.ComboBox cmbColorSystem;
     }
 }
