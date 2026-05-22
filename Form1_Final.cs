@@ -161,7 +161,7 @@ namespace Homwore
             };
             var lblDrop = new Label
             {
-                Text = "🖱️ اسحب صورة هنا أو اضغط Load",
+                Text = "🖱️ اسحب صورة هنا ",
                 AutoSize = false,
                 Size = new Size(380, 46),
                 TextAlign = ContentAlignment.MiddleCenter,
