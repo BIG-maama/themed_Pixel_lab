@@ -268,9 +268,7 @@ using System.Runtime.InteropServices;
 
 namespace PixelLab.Core
 {
-    /// <summary>
-    /// معالج قنوات الألوان - يتيح تفعيل/تعطيل القنوات وتعديل شدة كل قناة
-    /// </summary>
+
     public class ChannelProcessor
     {
         public bool EnableR { get; set; } = true;
@@ -328,9 +326,7 @@ namespace PixelLab.Core
             return result;
         }
 
-        /// <summary>
-        /// استخراج قناة الأحمر - تظهر البكسل باللون الأحمر (R فقط)
-        /// </summary>
+    
         public Bitmap ExtractRed(Bitmap original)
         {
             if (original == null) return null;
@@ -354,12 +350,12 @@ namespace PixelLab.Core
                     for (int x = 0; x < original.Width; x++)
                     {
                         int idx = y * srcData.Stride + x * 4;
-                        byte r = srcBuffer[idx + 2]; // قناة الأحمر
+                        byte r = srcBuffer[idx + 2]; 
 
-                        dstBuffer[idx] = 0;       // B = 0
-                        dstBuffer[idx + 1] = 0;     // G = 0
-                        dstBuffer[idx + 2] = r;     // R = قيمة الأحمر
-                        dstBuffer[idx + 3] = 255;   // A = 255
+                        dstBuffer[idx] = 0;       
+                        dstBuffer[idx + 1] = 0;     
+                        dstBuffer[idx + 2] = r;     
+                        dstBuffer[idx + 3] = 255;   
                     }
                 }
 
@@ -374,9 +370,7 @@ namespace PixelLab.Core
             return result;
         }
 
-        /// <summary>
-        /// استخراج قناة الأخضر - تظهر البكسل باللون الأخضر (G فقط)
-        /// </summary>
+        
         public Bitmap ExtractGreen(Bitmap original)
         {
             if (original == null) return null;
@@ -400,12 +394,12 @@ namespace PixelLab.Core
                     for (int x = 0; x < original.Width; x++)
                     {
                         int idx = y * srcData.Stride + x * 4;
-                        byte g = srcBuffer[idx + 1]; // قناة الأخضر
+                        byte g = srcBuffer[idx + 1];
 
-                        dstBuffer[idx] = 0;       // B = 0
-                        dstBuffer[idx + 1] = g;     // G = قيمة الأخضر
-                        dstBuffer[idx + 2] = 0;     // R = 0
-                        dstBuffer[idx + 3] = 255;   // A = 255
+                        dstBuffer[idx] = 0;      
+                        dstBuffer[idx + 1] = g;     
+                        dstBuffer[idx + 2] = 0;     
+                        dstBuffer[idx + 3] = 255;   
                     }
                 }
 
@@ -420,9 +414,7 @@ namespace PixelLab.Core
             return result;
         }
 
-        /// <summary>
-        /// استخراج قناة الأزرق - تظهر البكسل باللون الأزرق (B فقط)
-        /// </summary>
+        
         public Bitmap ExtractBlue(Bitmap original)
         {
             if (original == null) return null;
@@ -446,12 +438,12 @@ namespace PixelLab.Core
                     for (int x = 0; x < original.Width; x++)
                     {
                         int idx = y * srcData.Stride + x * 4;
-                        byte b = srcBuffer[idx]; // قناة الأزرق
+                        byte b = srcBuffer[idx];
 
-                        dstBuffer[idx] = b;       // B = قيمة الأزرق
-                        dstBuffer[idx + 1] = 0;     // G = 0
-                        dstBuffer[idx + 2] = 0;     // R = 0
-                        dstBuffer[idx + 3] = 255;   // A = 255
+                        dstBuffer[idx] = b;      
+                        dstBuffer[idx + 1] = 0;     
+                        dstBuffer[idx + 2] = 0;    
+                        dstBuffer[idx + 3] = 255;   
                     }
                 }
 

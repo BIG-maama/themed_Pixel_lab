@@ -196,7 +196,6 @@ namespace Homwore
         public event Action<Bitmap> ImageModified;
         Bitmap originalImage;
 
-        // ── ألوان الثيم ─────────────────────────────────────────────
         static readonly Color C_BgBase = Color.FromArgb(13, 15, 20);
         static readonly Color C_BgPanel = Color.FromArgb(18, 21, 28);
         static readonly Color C_BgCard = Color.FromArgb(24, 28, 38);
@@ -227,12 +226,9 @@ namespace Homwore
             cmbColorSystem.SelectedIndexChanged += new EventHandler(cmbColorSystem_Changed);
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  تطبيق الثيم على كل عناصر الفورم (المُنشأة من Designer)
-        // ════════════════════════════════════════════════════════════
         private void ApplyTheme()
         {
-            // ── Title bar ────────────────────────────────────────────
+        
             var titleBar = new Panel { Dock = DockStyle.Top, Height = 48, BackColor = C_BgTitle };
             titleBar.Paint += (s, e) =>
             {
@@ -262,7 +258,6 @@ namespace Homwore
             titleBar.Controls.AddRange(new Control[] { lblTitleBar, lblSubBar });
             this.Controls.Add(titleBar);
 
-            // ── PictureBoxes ──────────────────────────────────────────
             pictureBoxOriginal.BackColor = C_BgBase;
             pictureBoxOriginal.BorderStyle = BorderStyle.None;
             pictureBoxOriginal.HandleCreated += (s, e) => SetRound(pictureBoxOriginal, 6);
@@ -273,22 +268,21 @@ namespace Homwore
             pictureBoxResult.HandleCreated += (s, e) => SetRound(pictureBoxResult, 6);
             pictureBoxResult.Resize += (s, e) => SetRound(pictureBoxResult, 6);
 
-            // ── Upload button ─────────────────────────────────────────
+          
             StyleButton(btnUpload);
 
-            // ── Track bar ─────────────────────────────────────────────
+          
             trackBarColors.BackColor = C_BgPanel;
             trackBarColors.ForeColor = C_Accent;
 
-            // ── Labels ───────────────────────────────────────────────
+          
             lblColorCount.ForeColor = C_TxtSec;
             lblColorCount.BackColor = Color.Transparent;
             lblColorCount.Font = new Font("Cascadia Code", 9f);
 
-            // ── ComboBox ─────────────────────────────────────────────
+            
             StyleCombo(cmbColorSystem);
 
-            // ── Panel backgrounds ─────────────────────────────────────
             foreach (Control ctrl in this.Controls)
             {
                 if (ctrl is Panel pnl)
@@ -305,9 +299,7 @@ namespace Homwore
         }
         [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int l, int t, int r, int b, int ew, int eh);
-        // ════════════════════════════════════════════════════════════
-        //  Helpers
-        // ════════════════════════════════════════════════════════════
+      
         private static void SetRound(Control c, int r = 8) =>
      c.Region = Region.FromHrgn(
          CreateRoundRectRgn(0, 0, c.Width + 1, c.Height + 1, r, r));
@@ -357,9 +349,7 @@ namespace Homwore
             };
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  المنطق — لم يتغير
-        // ════════════════════════════════════════════════════════════
+       
         public void SetImage(Bitmap img)
         {
             originalImage?.Dispose();

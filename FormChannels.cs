@@ -180,7 +180,7 @@ namespace Homwore
 
         private Timer _debounceTimer;
 
-        // ── ألوان الثيم ─────────────────────────────────────────────
+    
         static readonly Color C_BgBase = Color.FromArgb(13, 15, 20);
         static readonly Color C_BgPanel = Color.FromArgb(18, 21, 28);
         static readonly Color C_BgCard = Color.FromArgb(24, 28, 38);
@@ -198,7 +198,7 @@ namespace Homwore
         static readonly Color C_TxtMuted = Color.FromArgb(90, 112, 144);
         static readonly Color C_TxtDim = Color.FromArgb(58, 74, 99);
 
-        // ── ألوان القنوات ────────────────────────────────────────────
+  
         static readonly Color C_Red = Color.FromArgb(255, 80, 80);
         static readonly Color C_RedDim = Color.FromArgb(80, 20, 20);
         static readonly Color C_GreenCh = Color.FromArgb(52, 211, 153);
@@ -206,7 +206,7 @@ namespace Homwore
         static readonly Color C_Blue = Color.FromArgb(64, 156, 255);
         static readonly Color C_BlueDim = Color.FromArgb(14, 35, 70);
 
-        // ────────────────────────────────────────────────────────────
+      
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int l, int t, int r, int b, int ew, int eh);
@@ -215,7 +215,7 @@ namespace Homwore
             c.Region = Region.FromHrgn(
                 CreateRoundRectRgn(0, 0, c.Width + 1, c.Height + 1, rad, rad));
 
-        // ════════════════════════════════════════════════════════════
+        
         public FormChannels()
         {
             _debounceTimer = new Timer();
@@ -225,9 +225,6 @@ namespace Homwore
             BuildUI();
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  بناء الواجهة بالثيم الداكن
-        // ════════════════════════════════════════════════════════════
         private void BuildUI()
         {
             this.Text = "PixelLab — Channels";
@@ -235,7 +232,7 @@ namespace Homwore
             this.BackColor = C_BgBase;
             this.ForeColor = C_TxtPri;
 
-            // ── Title bar ────────────────────────────────────────────
+         
             var titleBar = new Panel { Dock = DockStyle.Top, Height = 48, BackColor = C_BgTitle };
             titleBar.Paint += (s, e) =>
             {
@@ -265,7 +262,7 @@ namespace Homwore
             titleBar.Controls.AddRange(new Control[] { lblTitleBar, lblSubBar });
             this.Controls.Add(titleBar);
 
-            // ── Main content panel ────────────────────────────────────
+           
             var pnlMain = new Panel { Location = new Point(0, 48), Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right };
             pnlMain.BackColor = C_BgPanel;
             this.Controls.Add(pnlMain);
@@ -275,22 +272,18 @@ namespace Homwore
             };
             pnlMain.Size = new Size(this.ClientSize.Width, this.ClientSize.Height - 48);
 
-            // ── Load button ───────────────────────────────────────────
             btnLoad = MakeButton("📂 Load Image", 20, 18);
             btnLoad.Click += LoadImage;
             pnlMain.Controls.Add(btnLoad);
 
-            // ── Section label: Preview ────────────────────────────────
             pnlMain.Controls.Add(MakeSectionLabel("ORIGINAL", 20, 70));
             pnlMain.Controls.Add(MakeSectionLabel("RESULT", 340, 70));
 
-            // ── PictureBoxes — original & result ─────────────────────
             originalBox = MakePicBox(20, 90, 300, 260);
             resultBox = MakePicBox(340, 90, 300, 260);
             pnlMain.Controls.Add(originalBox);
             pnlMain.Controls.Add(resultBox);
 
-            // ── Divider ───────────────────────────────────────────────
             var divider = new Panel
             {
                 Location = new Point(660, 70),
@@ -299,7 +292,6 @@ namespace Homwore
             };
             pnlMain.Controls.Add(divider);
 
-            // ── Controls panel (right) ────────────────────────────────
             var pnlControls = new Panel
             {
                 Location = new Point(670, 70),
@@ -316,7 +308,7 @@ namespace Homwore
             BuildChannelRow(pnlControls, "B", "BLUE CHANNEL", C_Blue, C_BlueDim, 2, 200,
                 out chkB, out trackB, out lblBTitle, out lblBVal);
 
-            // ── Channel image boxes ───────────────────────────────────
+          
             pnlMain.Controls.Add(MakeSectionLabel("RED", 20, 370));
             pnlMain.Controls.Add(MakeSectionLabel("GREEN", 240, 370));
             pnlMain.Controls.Add(MakeSectionLabel("BLUE", 460, 370));
@@ -329,15 +321,13 @@ namespace Homwore
             pnlMain.Controls.Add(blueBox);
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  بناء صف قناة واحد (checkbox + slider + labels)
-        // ════════════════════════════════════════════════════════════
+ 
         private void BuildChannelRow(
             Panel parent, string key, string title,
             Color accentColor, Color dimColor, int index, int yOffset,
             out CheckBox chk, out TrackBar track, out Label lblTitle, out Label lblVal)
         {
-            // header strip
+          
             var strip = new Panel
             {
                 Location = new Point(8, yOffset),
@@ -374,7 +364,7 @@ namespace Homwore
             strip.Controls.AddRange(new Control[] { lblTitle, chk });
             parent.Controls.Add(strip);
 
-            // slider row
+       
             track = new TrackBar
             {
                 Location = new Point(8, yOffset + 34),
@@ -406,9 +396,7 @@ namespace Homwore
             parent.Controls.Add(lblVal);
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  Factory helpers
-        // ════════════════════════════════════════════════════════════
+
         private PictureBox MakePicBox(int x, int y, int w, int h)
         {
             var pb = new PictureBox
@@ -482,9 +470,7 @@ namespace Homwore
             g.DrawPath(pen, path);
         }
 
-        // ════════════════════════════════════════════════════════════
-        //  المنطق — لم يتغير
-        // ════════════════════════════════════════════════════════════
+     
         private void LoadImage(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();

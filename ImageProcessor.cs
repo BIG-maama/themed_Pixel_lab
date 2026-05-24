@@ -112,7 +112,7 @@ namespace Homwore
 
                         if (converter == null)
                         {
-                            // ======= RGB =======
+                          
                             resultColor = Color.FromArgb(
                                 ReduceChannel(r, step),
                                 ReduceChannel(g, step),
@@ -120,18 +120,18 @@ namespace Homwore
                         }
                         else
                         {
-                            // ======= باقي الأنظمة =======
+                      
                             Color original_pixel = Color.FromArgb(r, g, b);
 
-                            // RGB → النظام المطلوب
+                            
                             ColorResult converted = converter.FromRgb(original_pixel);
 
-                            // تقليل القنوات بنطاق كل قناة الصحيح ← التعديل هون
+                       
                             double newCh1 = ReduceAnyChannel(converted.Channel1, converter.SystemName, 1, colorLevels);
                             double newCh2 = ReduceAnyChannel(converted.Channel2, converter.SystemName, 2, colorLevels);
                             double newCh3 = ReduceAnyChannel(converted.Channel3, converter.SystemName, 3, colorLevels);
 
-                            // النظام المطلوب → RGB
+                           
                             resultColor = converter.ToRgb(newCh1, newCh2, newCh3);
                         }
 
@@ -149,7 +149,6 @@ namespace Homwore
             return newBitmap;
         }
 
-        // تقليل قناة RGB (0-255)
         private static byte ReduceChannel(byte value, int step)
         {
             int newVal = (int)(Math.Round((double)value / step) * step);
@@ -166,19 +165,19 @@ namespace Homwore
             switch (systemName)
             {
                 case "HSV":
-                    if (channelNumber == 1) { min = 0; max = 360; } // H
-                    else { min = 0; max = 1; } // S, V
+                    if (channelNumber == 1) { min = 0; max = 360; } 
+                    else { min = 0; max = 1; } 
                     break;
 
                 case "YUV":
-                    if (channelNumber == 1) { min = 0; max = 255; } // Y
-                    else if (channelNumber == 2) { min = -111; max = 111; } // U
-                    else { min = -157; max = 157; } // V
+                    if (channelNumber == 1) { min = 0; max = 255; } 
+                    else if (channelNumber == 2) { min = -111; max = 111; } 
+                    else { min = -157; max = 157; } 
                     break;
 
                 case "L*a*b*":
-                    if (channelNumber == 1) { min = 0; max = 100; } // L
-                    else { min = -128; max = 127; } // a, b
+                    if (channelNumber == 1) { min = 0; max = 100; } 
+                    else { min = -128; max = 127; } 
                     break;
 
                 case "CMY":

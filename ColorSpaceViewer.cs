@@ -42,7 +42,6 @@ namespace Homwore
             public Color C;
         }
 
-        // ✅ ذاكرة مؤقتة للنقاط (للنقر السريع)
         private List<ColorPoint3D> hsvPoints = new List<ColorPoint3D>();
         private List<(PointF screen, Color color, double depth)> rgbPointsCache = new List<(PointF, Color, double)>();
 

@@ -24,9 +24,6 @@ namespace PixelLab.ColorSystems
         }
     }
 
-    /// <summary>
-    /// مدير الأنظمة اللونية - تحويلات دقيقة بين جميع الأنظمة
-    /// </summary>
     public class ColorSystemManager
     {
         private List<string> _systems = new List<string> { "RGB", "CMY", "CMYK", "HSV", "HSL", "YUV", "YCbCr", "L*a*b*", "XYZ" };
@@ -85,7 +82,7 @@ namespace PixelLab.ColorSystems
             return (c * 100, m * 100, y * 100, k * 100);
         }
 
-        // 3. أضف دالة CMYK→RGB
+    
         private Color CmykToRgb(double c, double m, double y, double k)
         {
             double cNorm = c / 100.0, mNorm = m / 100.0, yNorm = y / 100.0, kNorm = k / 100.0;
@@ -212,9 +209,7 @@ namespace PixelLab.ColorSystems
             }
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  RGB → HSV
-        // ═══════════════════════════════════════════════════════════
+       
         private void RgbToHsv(int r, int g, int b, out double h, out double s, out double v)
         {
             double rd = r / 255.0, gd = g / 255.0, bd = b / 255.0;
@@ -251,9 +246,6 @@ namespace PixelLab.ColorSystems
             return Color.FromArgb(Clamp(r), Clamp(g), Clamp(b));
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  RGB → HSL
-        // ═══════════════════════════════════════════════════════════
         private void RgbToHsl(int r, int g, int b, out double h, out double s, out double l)
         {
             double rd = r / 255.0, gd = g / 255.0, bd = b / 255.0;
@@ -296,9 +288,7 @@ namespace PixelLab.ColorSystems
                 Clamp(b + m));
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  YUV
-        // ═══════════════════════════════════════════════════════════
+     
         private Color YuvToRgb(double y, double u, double v)
         {
             int r = Clamp((int)(y + 1.13983 * v));
@@ -307,9 +297,7 @@ namespace PixelLab.ColorSystems
             return Color.FromArgb(r, g, b);
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  YCbCr
-        // ═══════════════════════════════════════════════════════════
+     
         private Color YCbCrToRgb(double y, double cb, double cr)
         {
             double yNorm = (y - 16) / 219.0;
@@ -322,9 +310,7 @@ namespace PixelLab.ColorSystems
             return Color.FromArgb(r, g, b);
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  LAB
-        // ═══════════════════════════════════════════════════════════
+    
         private (double L, double a, double b) RgbToLab(int r, int g, int b)
         {
             var xyz = RgbToXyz(r, g, b);
@@ -363,9 +349,7 @@ namespace PixelLab.ColorSystems
             return t3 > 0.008856 ? t3 : (t - 16.0 / 116.0) / 7.787;
         }
 
-        // ═══════════════════════════════════════════════════════════
-        //  XYZ
-        // ═══════════════════════════════════════════════════════════
+
         private (double X, double Y, double Z) RgbToXyz(int r, int g, int b)
         {
             double rd = r / 255.0, gd = g / 255.0, bd = b / 255.0;

@@ -1267,7 +1267,7 @@ namespace Homwore
 
                 lblStatus.Text = $"✅ تم — {currentSystem} | " +
                                       $"Δ({realOffset1:+0.0;-0.0}, {realOffset2:+0.0;-0.0}, {realOffset3:+0.0;-0.0})";
-                lblStatus.ForeColor = C_Ch2; // أخضر
+                lblStatus.ForeColor = C_Ch2;
             }
             catch (Exception ex)
             {

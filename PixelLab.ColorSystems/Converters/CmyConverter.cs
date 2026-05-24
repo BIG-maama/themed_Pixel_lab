@@ -1,14 +1,3 @@
-// ===================================================================
-//  CmykConverter.cs  — CMYK حقيقي بـ 4 قنوات
-//  يحل محل CmyConverter.cs القديم (3 قنوات فقط)
-//
-//  الفرق:
-//    CMY  القديم:  C=135, M=175, Y=55          (3 قنوات، بدون K)
-//    CMYK الجديد:  C=0%, M=53%, Y=84%, K=47%   (4 قنوات، مع K)
-//
-//  ملاحظة: ColorResult يدعم 3 قنوات فقط، لذلك
-//  أضفنا CmykResult منفصل + wrapper يعرض K في Channel3Name
-// ===================================================================
 
 using System;
 using System.Drawing;
@@ -17,13 +6,12 @@ using PixelLab.ColorSystems.Models;
 
 namespace PixelLab.ColorSystems.Converters
 {
-    // ─── نموذج النتيجة الممتد لـ 4 قنوات ───────────────────────────
     public class CmykResult
     {
-        public double C { get; }   // Cyan    0-100%
-        public double M { get; }   // Magenta 0-100%
-        public double Y { get; }   // Yellow  0-100%
-        public double K { get; }   // Key (Black) 0-100%
+        public double C { get; }   
+        public double M { get; }   
+        public double Y { get; }   
+        public double K { get; }   
 
         public CmykResult(double c, double m, double y, double k)
         {
@@ -37,18 +25,15 @@ namespace PixelLab.ColorSystems.Converters
             => $"CMYK → C: {C:F1}%, M: {M:F1}%, Y: {Y:F1}%, K: {K:F1}%";
     }
 
-    // ─── المحول الرئيسي ───────────────────────────────────────────
     public sealed class CmykConverter : ColorSpaceConverter
     {
-        // الاسم ظاهر في الـ UI كـ "CMYK"
+      
         public override string SystemName => "CMYK";
 
-        // نعرض 3 قنوات في الـ Slider (C, M, Y) ونعامل K منفصلاً
-        // لأن ColorSpaceConverter base يدعم 3 قنوات فقط
+       
         public override string[] ChannelNames
             => new[] { "C (Cyan) %", "M (Magenta) %", "Y (Yellow) %" };
 
-        // ─── RGB → CMYK ────────────────────────────────────────────
         public CmykResult FromRgbFull(Color rgb)
         {
             double r = rgb.R / 255.0;
@@ -57,7 +42,6 @@ namespace PixelLab.ColorSystems.Converters
 
             double k = 1.0 - Math.Max(r, Math.Max(g, b));
 
-            // حالة الأسود الخالص — منع القسمة على صفر
             if (k >= 1.0)
                 return new CmykResult(0, 0, 0, 100);
 
@@ -68,9 +52,7 @@ namespace PixelLab.ColorSystems.Converters
             return new CmykResult(c, m, y, k * 100.0);
         }
 
-        // ─── ColorSpaceConverter interface — يستخدم 3 قنوات للـ Slider ─
-        // نخزن C, M, Y في القنوات الثلاث
-        // K محسوبة تلقائياً من RGB ولا تُعدَّل يدوياً
+     
         public override ColorResult FromRgb(Color rgb)
         {
             var cmyk = FromRgbFull(rgb);
@@ -79,14 +61,12 @@ namespace PixelLab.ColorSystems.Converters
                 "C", cmyk.C,
                 "M", cmyk.M,
                 "Y", cmyk.Y);
-            // K لا تظهر في الـ Slider لكن تُحسب في التحويل الكامل
         }
 
-        // ─── CMYK → RGB ────────────────────────────────────────────
-        // هذه النسخة الكاملة بـ 4 قنوات
+     
         public Color ToRgbFull(double c, double m, double y, double k)
         {
-            // تأكد القيم داخل 0-100
+          
             c = Math.Max(0, Math.Min(100, c));
             m = Math.Max(0, Math.Min(100, m));
             y = Math.Max(0, Math.Min(100, y));
@@ -102,13 +82,10 @@ namespace PixelLab.ColorSystems.Converters
             return Color.FromArgb(r, g, b);
         }
 
-        // النسخة التي يستدعيها الـ base class (3 قنوات)
-        // K تُحسب من C,M,Y تلقائياً لو ما انتبهنا
-        // لكن الأصح: نعيد حساب K من القيم الجديدة
+   
         public override Color ToRgb(double c, double m, double y)
         {
-            // احسب K من C, M, Y بدون افتراض قيمة ثابتة
-            // K = 1 - max(1-C/100, 1-M/100, 1-Y/100)
+ 
             double r1 = 1 - c / 100.0;
             double g1 = 1 - m / 100.0;
             double b1 = 1 - y / 100.0;

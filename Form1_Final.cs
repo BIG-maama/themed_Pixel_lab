@@ -864,7 +864,6 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
-// ✅ FIX: تحديد نسخة Timer بشكل صريح لتجنب التعارض مع System.Threading.Timer
 using Timer = System.Windows.Forms.Timer;
 using System.Windows.Forms;
 
@@ -872,7 +871,6 @@ namespace Homwore
 {
     public partial class Form1 : Form
     {
-        // ── Win32: زوايا مدورة ─────────────────────────────────────
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
             int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
@@ -940,7 +938,6 @@ namespace Homwore
 
         private void SetupUI()
         {
-            // ── شريط عنوان مخصص ─────────────────────────────────
             var titleBar = new Panel { Dock = DockStyle.Top, Height = 48, BackColor = C_BgTitle };
             titleBar.Paint += (s, e) =>
             {
