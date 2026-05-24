@@ -1,0 +1,318 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ColorSpaceViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ColorSpaceViewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1_Final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1_Final.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ImageProcessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ImageProcessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Projection3D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Projection3D.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\FormChannels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FormChannels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\ColorSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\ColorSystemManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\IntegrationExample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\IntegrationExample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Models\\ColorResult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Models\\ColorResult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YuvConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Converters\\YuvConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\LabConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Converters\\LabConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\HsvConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Converters\\HsvConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\CmyConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Converters\\CmyConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab\\Core\\ChannelProcessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PixelLab\\Core\\ChannelProcessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImageProcessor.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ImageProcessor.cs",
+              "RelativeDocumentMoniker": "ImageProcessor.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ImageProcessor.cs",
+              "RelativeToolTip": "ImageProcessor.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAALMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:20:12.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form3.cs",
+              "RelativeDocumentMoniker": "Form3.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form3.cs",
+              "RelativeToolTip": "Form3.cs",
+              "ViewState": "AgIAAKQBAAAAAAAAAAAAAF8BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:19:01.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1_Final.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1_Final.cs",
+              "RelativeDocumentMoniker": "Form1_Final.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1_Final.cs",
+              "RelativeToolTip": "Form1_Final.cs",
+              "ViewState": "AgIAAEUDAAAAAAAAAAAAADkDAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:18:31.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAO4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:18:24.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormChannels.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\FormChannels.cs",
+              "RelativeDocumentMoniker": "FormChannels.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\FormChannels.cs",
+              "RelativeToolTip": "FormChannels.cs",
+              "ViewState": "AgIAAAQCAAAAAAAAAAAAANgBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:17:13.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ColorSpaceViewer.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ColorSpaceViewer.cs",
+              "RelativeDocumentMoniker": "ColorSpaceViewer.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\ColorSpaceViewer.cs",
+              "RelativeToolTip": "ColorSpaceViewer.cs",
+              "ViewState": "AgIAAEwCAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:16:52.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Projection3D.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Projection3D.cs",
+              "RelativeDocumentMoniker": "Projection3D.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Projection3D.cs",
+              "RelativeToolTip": "Projection3D.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:20:50.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:20:54.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IntegrationExample.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\IntegrationExample.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\IntegrationExample.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\IntegrationExample.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\IntegrationExample.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:49.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ColorResult.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Models\\ColorResult.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Models\\ColorResult.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Models\\ColorResult.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Models\\ColorResult.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:46.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ColorSystemManager.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\ColorSystemManager.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\ColorSystemManager.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\ColorSystemManager.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\ColorSystemManager.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAAIEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:44.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "YuvConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YuvConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Converters\\YuvConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YuvConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Converters\\YuvConverter.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:41.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "YCbCrConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Converters\\YCbCrConverter.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:39.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LabConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\LabConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Converters\\LabConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\LabConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Converters\\LabConverter.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:36.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HsvConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\HsvConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Converters\\HsvConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\HsvConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Converters\\HsvConverter.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:15:33.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CmyConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\CmyConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Converters\\CmyConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Converters\\CmyConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Converters\\CmyConverter.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:14:24.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ColorSpaceConverter.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs",
+              "RelativeDocumentMoniker": "PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs",
+              "RelativeToolTip": "PixelLab.ColorSystems\\Base\\ColorSpaceConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:14:21.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ChannelProcessor.cs",
+              "DocumentMoniker": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab\\Core\\ChannelProcessor.cs",
+              "RelativeDocumentMoniker": "PixelLab\\Core\\ChannelProcessor.cs",
+              "ToolTip": "D:\\themed_Pixel_lab\\Pixel_lab_buckup\\PixelLab\\PixelLab\\Core\\ChannelProcessor.cs",
+              "RelativeToolTip": "PixelLab\\Core\\ChannelProcessor.cs",
+              "ViewState": "AgIAALMBAAAAAAAAAAAAALgBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T09:13:10.98Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

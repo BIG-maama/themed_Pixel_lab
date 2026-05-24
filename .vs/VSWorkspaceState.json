@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PixelLab",
+    "\\PixelLab.ColorSystems",
+    "\\PixelLab.ColorSystems\\Base",
+    "\\PixelLab.ColorSystems\\Converters",
+    "\\PixelLab.ColorSystems\\Models",
+    "\\PixelLab\\Core"
+  ],
+  "SelectedNode": "\\ColorSpaceViewer.cs",
+  "PreviewInSolutionExplorer": false
+}
