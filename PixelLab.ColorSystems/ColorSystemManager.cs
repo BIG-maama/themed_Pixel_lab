@@ -1,78 +1,8 @@
-//using System;
-//using System.Collections.Generic;
-//using System.Drawing;
-//using PixelLab.ColorSystems.Base;
-//using PixelLab.ColorSystems.Converters;
-//using PixelLab.ColorSystems.Models;
 
-//namespace PixelLab.ColorSystems
-//{
-//    /// <summary>
-//    /// الكلاس الرئيسي — هذا اللي يستخدمه باقي المجموعة.
-//    ///
-//    /// مثال:
-//    ///   var manager = new ColorSystemManager();
-//    ///   var results = manager.ConvertAll(color);
-//    ///   Color newColor = manager.UpdateChannel("HSV", 260, 0.6, 0.78);
-//    /// </summary>
-//    public class ColorSystemManager
-//    {
-//        private readonly Dictionary<string, ColorSpaceConverter> _converters;
-
-//        public ColorSystemManager()
-//        {
-//            _converters = new Dictionary<string, ColorSpaceConverter>();
-//            _converters.Add("CMY", new CmyConverter());
-//            _converters.Add("HSV", new HsvConverter());
-//            _converters.Add("YUV", new YuvConverter());
-//            _converters.Add("YCbCr", new YCbCrConverter());
-//            _converters.Add("L*a*b*", new LabConverter());
-//        }
-
-//        // أسماء الأنظمة — لبناء الـ ComboBox في الواجهة
-//        public List<string> AvailableSystems
-//        {
-//            get { return new List<string>(_converters.Keys); }
-//        }
-
-//        // تحويل لون لجميع الأنظمة مرة واحدة
-//        public List<ColorResult> ConvertAll(Color rgb)
-//        {
-//            List<ColorResult> results = new List<ColorResult>();
-//            foreach (ColorSpaceConverter converter in _converters.Values)
-//                results.Add(converter.FromRgb(rgb));
-//            return results;
-//        }
-
-//        // تحويل لنظام واحد محدد
-//        public ColorResult ConvertTo(string systemName, Color rgb)
-//        {
-//            if (!_converters.ContainsKey(systemName))
-//                throw new ArgumentException("النظام غير موجود: " + systemName);
-//            return _converters[systemName].FromRgb(rgb);
-//        }
-
-//        // تحديث قيم المركبات وإرجاع اللون الجديد (للـ Sliders)
-//        public Color UpdateChannel(string systemName, double ch1, double ch2, double ch3)
-//        {
-//            if (!_converters.ContainsKey(systemName))
-//                throw new ArgumentException("النظام غير موجود: " + systemName);
-//            return _converters[systemName].ToRgb(ch1, ch2, ch3);
-//        }
-
-//        // أسماء مركبات نظام معين (لتسمية الـ Sliders)
-//        public string[] GetChannelNames(string systemName)
-//        {
-//            if (!_converters.ContainsKey(systemName))
-//                throw new ArgumentException("النظام غير موجود: " + systemName);
-//            return _converters[systemName].ChannelNames;
-//        }
-//    }
-//}
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-
+using PixelLab.ColorSystems.Converters;
 namespace PixelLab.ColorSystems
 {
     namespace Models
@@ -99,7 +29,7 @@ namespace PixelLab.ColorSystems
     /// </summary>
     public class ColorSystemManager
     {
-        private List<string> _systems = new List<string> { "RGB", "CMY", "HSV", "HSL", "YUV", "YCbCr", "L*a*b*", "XYZ" };
+        private List<string> _systems = new List<string> { "RGB", "CMY", "CMYK", "HSV", "HSL", "YUV", "YCbCr", "L*a*b*", "XYZ" };
 
         public List<string> AvailableSystems => _systems;
 
@@ -109,6 +39,7 @@ namespace PixelLab.ColorSystems
             {
                 case "RGB": return new[] { "R", "G", "B" };
                 case "CMY": return new[] { "C", "M", "Y" };
+                case "CMYK": return new[] { "C (Cyan)%", "M (Magenta)%", "Y (Yellow)%" };
                 case "HSV": return new[] { "H", "S", "V" };
                 case "HSL": return new[] { "H", "S", "L" };
                 case "YUV": return new[] { "Y", "U", "V" };
@@ -134,6 +65,37 @@ namespace PixelLab.ColorSystems
             return results;
         }
 
+        
+        private (double C, double M, double Y, double K) RgbToCmyk(int r, int g, int b)
+        {
+            double rNorm = r / 255.0, gNorm = g / 255.0, bNorm = b / 255.0;
+            double k = 1.0 - Math.Max(rNorm, Math.Max(gNorm, bNorm));
+            double c, m, y;
+
+            if (k < 1.0)
+            {
+                c = (1.0 - rNorm - k) / (1.0 - k);
+                m = (1.0 - gNorm - k) / (1.0 - k);
+                y = (1.0 - bNorm - k) / (1.0 - k);
+            }
+            else
+            {
+                c = 0; m = 0; y = 0;
+            }
+            return (c * 100, m * 100, y * 100, k * 100);
+        }
+
+        // 3. أضف دالة CMYK→RGB
+        private Color CmykToRgb(double c, double m, double y, double k)
+        {
+            double cNorm = c / 100.0, mNorm = m / 100.0, yNorm = y / 100.0, kNorm = k / 100.0;
+            int r = (int)(255 * (1 - cNorm) * (1 - kNorm));
+            int g = (int)(255 * (1 - mNorm) * (1 - kNorm));
+            int b = (int)(255 * (1 - yNorm) * (1 - kNorm));
+            return Color.FromArgb(Clamp(r), Clamp(g), Clamp(b));
+        }
+
+
         public Models.ColorConversionResult ConvertTo(string systemName, Color color)
         {
             var result = new Models.ColorConversionResult { SystemName = systemName };
@@ -155,6 +117,14 @@ namespace PixelLab.ColorSystems
                     result.Channel2 = (1 - color.G / 255.0) * 100;
                     result.Channel3 = (1 - color.B / 255.0) * 100;
                     break;
+                case "CMYK":
+                    var cmykConv = new CmykConverter();
+                    var cmykFull = cmykConv.FromRgbFull(color);
+                    result.Channel1Name = "C"; result.Channel1 = cmykFull.C;
+                    result.Channel2Name = "M"; result.Channel2 = cmykFull.M;
+                    result.Channel3Name = "Y"; result.Channel3 = cmykFull.Y;
+                    break;
+
 
                 case "HSV":
                     RgbToHsv(color.R, color.G, color.B, out double h, out double s, out double v);
@@ -215,6 +185,9 @@ namespace PixelLab.ColorSystems
                     int g = Clamp((int)((1 - v2 / 100.0) * 255));
                     int b = Clamp((int)((1 - v3 / 100.0) * 255));
                     return Color.FromArgb(r, g, b);
+                case "CMYK":
+                    var cmykConv2 = new CmykConverter();
+                    return cmykConv2.ToRgb(v1, v2, v3);
 
                 case "HSV":
                     return HsvToRgb(v1, v2 / 100.0, v3 / 100.0);

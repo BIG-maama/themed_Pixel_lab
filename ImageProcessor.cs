@@ -156,14 +156,13 @@ namespace Homwore
             return (byte)Math.Max(0, Math.Min(255, newVal));
         }
 
-        // ← حذفنا ReduceChannelDouble و GetChannelRange القديمتين
-        // وحطينا ReduceAnyChannel الجديدة بدلهم
+        
 
         private static double ReduceAnyChannel(double value, string systemName, int channelNumber, int colorLevels)
         {
             double min, max;
 
-            // نطاق كل قناة حسب اسم النظام مباشرة ← هون التعديل الأساسي
+           
             switch (systemName)
             {
                 case "HSV":
